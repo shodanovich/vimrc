@@ -99,11 +99,15 @@ inoremap <C-l> <Esc>lviwui
 inoremap <C-f> <Esc>/
 
 " F5 запуск текущего файла 
-inoremap <F5> <Esc>:w<Enter>:source ~/vimscripts/run.vim<Enter>
-nnoremap <F5> :w<Enter>:source ~/vimscripts/run.vim<Enter>
+" inoremap <F5> <Esc>:w<Enter>:source ~/vimscripts/run.vim<Enter>
+inoremap <F5> <Esc>:w<Enter>:source ~/.vim/ftplugin/run.vim<Enter>
+" nnoremap <F5> :w<Enter>:source ~/vimscripts/run.vim<Enter>
+nnoremap <F5> :w<Enter>:source ~/.vim/ftplugin/run.vim<Enter>
 " Ctrl-F5 - запуск проекта
-inoremap <C-F5>  <Esc>:wa<Enter>:source ~/vimscripts/runproject.vim<Enter>
-nnoremap <C-F5>  :wa<Enter>:source ~/vimscripts/runproject.vim<Enter>
+" inoremap <C-F5>  <Esc>:wa<Enter>:source ~/vimscripts/runproject.vim<Enter>
+" nnoremap <C-F5>  :wa<Enter>:source ~/vimscripts/runproject.vim<Enter>
+inoremap <C-F5>  <Esc>:wa<Enter>:source ~/.vim/ftplugin/runproject.vim<Enter>
+nnoremap <C-F5>  :wa<Enter>:source ~/.vim/ftplugin/runproject.vim<Enter>
 
 " переход в визуальный блочный режим
 inoremap <C-b> <Esc><C-v>
@@ -112,7 +116,8 @@ inoremap <C-b> <Esc><C-v>
 " Переходим в визуальный блочный режим
 " и выделяем строки стрелочками или весь абзац { -вниз, } - вверх
 " вставляем комментарий и переходим в режим вставки
-vnoremap <Ins> I#<Esc>i
+" vnoremap <Ins> I#<Esc>i
+vnoremap <Ins> <Esc>:source ~/.vim/ftplugin/comment.vim<Enter>
 " Отмена
 " переходим снова в визуальный блочный режим по <C-v> и выделяем строки
 " отменяем комментарий и возвращаемся в режим вставки
